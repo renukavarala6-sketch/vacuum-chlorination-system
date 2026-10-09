@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vacuum Chlorination System | Products</title>
+<style>
+:root{--navy:#102b46;--blue:#087eae;--light:#eef7fb;--white:#fff;--text:#263747}
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;color:var(--text);line-height:1.6}
+header{background:var(--navy);color:white;padding:18px 7%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.logo{font-size:21px;font-weight:bold}
+nav a{color:white;text-decoration:none;margin:0 9px;font-size:14px}
+.hero{padding:65px 7%;background:linear-gradient(120deg,#e8f6fc,#fff);display:grid;grid-template-columns:1.2fr 1fr;align-items:center;gap:30px}
+.hero h1{font-size:clamp(30px,4vw,48px);line-height:1.15;color:var(--navy)}
+.hero p{font-size:17px}
+.btn{display:inline-block;background:var(--blue);color:white;padding:12px 20px;border:0;border-radius:6px;text-decoration:none;cursor:pointer}
+.hero img{width:100%;border-radius:12px;object-fit:cover;max-height:330px}
+section{padding:48px 7%}
+h2{text-align:center;color:var(--navy);margin-top:0}
+.intro{text-align:center;max-width:780px;margin:0 auto 28px}
+.search{display:block;width:100%;max-width:500px;margin:0 auto 25px;padding:13px;border:1px solid #b9cbd6;border-radius:7px;font-size:16px}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.card{border:1px solid #dce7ed;border-radius:10px;overflow:hidden;background:white;box-shadow:0 3px 12px #17344c0b}
+.card img{width:100%;height:180px;object-fit:cover;background:var(--light)}
+.card-content{padding:18px}
+.card h3{margin:0 0 8px;color:var(--navy)}
+.card p{font-size:14px}
+.tag{font-size:12px;color:#087eae;font-weight:bold}
+.details{display:none;margin-top:10px;padding:10px;background:var(--light);font-size:14px}
+.details.open{display:block}
+.alt{background:var(--light)}
+.columns{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.columns article{background:white;padding:20px;border-radius:8px}
+footer{background:var(--navy);color:white;text-align:center;padding:28px 7%}
+footer a{color:white}
+@media(max-width:800px){.hero{grid-template-columns:1fr}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.columns{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.grid,.columns{grid-template-columns:1fr}nav a{display:inline-block;margin:4px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="logo">VACUUM CHLORINATION</div>
+  <nav>
+    <a href="#home">Home</a><a href="#about">About</a>
+    <a href="#products">Products</a><a href="#applications">Applications</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <div>
+    <p class="tag">WATER TREATMENT EQUIPMENT</p>
+    <h1>Vacuum Chlorination System</h1>
+    <p>Explore components used in vacuum chlorination systems for controlled chlorine dosing in water-treatment applications.</p>
+    <a class="btn" href="#products">Explore Products</a>
+  </div>
+  <img src="https://images.unsplash.com/photo-1581092921461-eab62e97a780?auto=format&fit=crop&w=900&q=80" alt="Industrial equipment">
+</section>
+
+<section id="about">
+  <h2>About the System</h2>
+  <p class="intro">A vacuum chlorination system uses a vacuum-based mechanism to draw and meter chlorine gas into a water stream for disinfection. System design and components vary by manufacturer, capacity and application.</p>
+</section>
+
+<section id="products" class="alt">
+  <h2>Our Products</h2>
+  <p class="intro">Browse the components below. Select “View Details” to read a short description.</p>
+  <input id="search" class="search" type="search" placeholder="Search products..." aria-label="Search products">
+  <div class="grid" id="productGrid">
+    <article class="card" data-name="ejector injector venturi">
+      <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=700&q=80" alt="Industrial equipment representing an ejector">
+      <div class="card-content"><span class="tag">01 · VACUUM COMPONENT</span><h3>Ejector</h3><p>Uses a motive-water stream to create vacuum and draw chlorine gas into the water flow.</p><button class="btn" onclick="toggleDetails(this)">View Details</button><div class="details">Commonly based on a venturi principle. Confirm water pressure, flow requirements and material compatibility from the selected model's datasheet.</div></div>
+    </article>
+    <article class="card" data-name="flow meter rotameter">
+      <img src="https://images.unsplash.com/photo-1581092334651-ddf26d9a09d0?auto=format&fit=crop&w=700&q=80" alt="Industrial instrument representing a flow meter">
+      <div class="card-content"><span class="tag">02 · MEASUREMENT</span><h3>Flow Meter</h3><p>Indicates the chlorine-gas flow rate in compatible chlorination equipment.</p><button class="btn" onclick="toggleDetails(this)">View Details</button><div class="details">Flow range, calibration, scale units and gas compatibility depend on the exact meter model.</div></div>
+    </article>
+    <article class="card" data-name="vacuum regulator">
+      <img src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&w=700&q=80" alt="Industrial component representing a vacuum regulator">
+      <div class="card-content"><span class="tag">03 · VACUUM CONTROL</span><h3>Vacuum Regulator</h3><p>Helps regulate vacuum and control gas supply in a designed vacuum chlorination assembly.</p><button class="btn" onclick="toggleDetails(this)">View Details</button><div class="details">Construction, operating range and safety features must be checked against manufacturer documentation.</div></div>
+    </article>
+    <article class="card" data-name="pressure reducing valve">
+      <img src="https://images.unsplash.com/photo-1567789884554-0b844b597180?auto=format&fit=crop&w=700&q=80" alt="Industrial valve">
+      <div class="card-content"><span class="tag">04 · PRESSURE CONTROL</span><h3>Pressure Reducing Valve</h3><p>Reduces inlet pressure to a specified downstream pressure in applications for which the valve is designed.</p><button class="btn" onclick="toggleDetails(this)">View Details</button><div class="details">Do not assume every pressure reducing valve is suitable for chlorine service. Verify the exact gas, pressure rating and materials.</div></div>
+    </article>
+    <article class="card" data-name="vacuum switch sensor">
+      <img src="https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?auto=format&fit=crop&w=700&q=80" alt="Industrial sensor and control equipment">
+      <div class="card-content"><span class="tag">05 · MONITORING</span><h3>Vacuum Switch</h3><p>Provides an electrical switching signal when the sensed vacuum reaches its configured threshold.</p><button class="btn" onclick="toggleDetails(this)">View Details</button><div class="details">Check switching range, electrical rating, connection type and compatibility with the control system.</div></div>
+    </article>
+    <article class="card" data-name="auxiliary valve">
+      <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=700&q=80" alt="Industrial valve component">
+      <div class="card-content"><span class="tag">06 · FLOW CONTROL</span><h3>Auxiliary Valve</h3><p>An additional valve used for an intended isolation or control function in a compatible assembly.</p><button class="btn" onclick="toggleDetails(this)">View Details</button><div class="details">Its exact role and permitted use depend on the equipment design and manufacturer instructions.</div></div>
+    </article>
+    <article class="card" data-name="clamp mounting pipe clamp">
+      <img src="https://images.unsplash.com/photo-1530124566582-a618bc2615dc?auto=format&fit=crop&w=700&q=80" alt="Industrial hardware">
+      <div class="card-content"><span class="tag">07 · MOUNTING</span><h3>Clamp</h3><p>Secures suitable pipes, tubing or components in a mounting arrangement.</p><button class="btn" onclick="toggleDetails(this)">View Details</button><div class="details">Select a clamp based on dimensions, load, environment and the manufacturer's installation guidance.</div></div>
+    </article>
+    <article class="card" data-name="floor mounted chlorinator">
+      <img src="https://images.unsplash.com/photo-1581093458791-9d42e3c3f7f0?auto=format&fit=crop&w=700&q=80" alt="Industrial equipment representing a floor-mounted chlorinator">
+      <div class="card-content"><span class="tag">08 · CHLORINATION</span><h3>Floor-Mounted Chlorinator</h3><p>A floor-installed chlorinator assembly designed to meter chlorine for a water-treatment process.</p><button class="btn" onclick="toggleDetails(this)">View Details</button><div class="details">Capacity, mounting, gas supply configuration and required accessories depend on the selected model.</div></div>
+    </article>
+    <article class="card" data-name="manifold cylinder header">
+      <img src="https://images.unsplash.com/photo-1516937941344-00b4e0337589?auto=format&fit=crop&w=700&q=80" alt="Industrial piping and manifold equipment">
+      <div class="card-content"><span class="tag">09 · GAS DISTRIBUTION</span><h3>Manifold</h3><p>Connects multiple gas-cylinder outlets to a common header in a properly engineered system.</p><button class="btn" onclick="toggleDetails(this)">View Details</button><div class="details">A chlorine-service manifold requires approved materials, connections, pressure ratings and professional installation.</div></div>
+    </article>
+    <article class="card" data-name="copper pipe tubing">
+      <img src="https://images.unsplash.com/photo-1530124566582-a618bc2615dc?auto=format&fit=crop&w=700&q=80" alt="Metal tubing representing piping components">
+      <div class="card-content"><span class="tag">10 · PIPING</span><h3>Copper Pipe</h3><p>Listed for comparison as a piping component; suitability must be assessed for the intended service.</p><button class="btn" onclick="toggleDetails(this)">View Details</button><div class="details">Copper must not be assumed suitable for chlorine gas. Verify dry or wet service conditions and the equipment manufacturer's approved materials before specifying any pipe.</div></div>
+    </article>
+  </div>
+  <p id="noResults" style="display:none;text-align:center">No matching products found.</p>
+</section>
+
+<section id="applications">
+  <h2>Applications</h2>
+  <div class="columns">
+    <article><h3>Drinking Water</h3><p>Chlorination may be used as part of a properly designed drinking-water disinfection process.</p></article>
+    <article><h3>Wastewater</h3><p>Selected treatment plants use controlled disinfection as one stage of wastewater treatment.</p></article>
+    <article><h3>Industrial Water</h3><p>Suitable systems can support process-water treatment when selected and operated to relevant requirements.</p></article>
+  </div>
+</section>
+
+<section id="contact" class="alt">
+  <h2>Product Enquiry</h2>
+  <p class="intro">For a real installation, contact a qualified supplier and request the correct product datasheet, compatibility details and safety documentation.</p>
+  <p style="text-align:center"><a class="btn" href="mailto:">Contact Supplier by Email</a></p>
+  <p class="intro">Demo website: replace this email link with the approved company email before publishing for business use.</p>
+</section>
+</main>
+
+<footer>
+  <p><strong>Vacuum Chlorination System Products</strong></p>
+  <p>Educational project · Product images are illustrative and may not represent exact models.</p>
+  <p>Technical specifications should be confirmed with the manufacturer.</p>
+</footer>
+
+<script>
+function toggleDetails(button){
+  const details=button.nextElementSibling;
+  details.classList.toggle('open');
+  button.textContent=details.classList.contains('open')?'Hide Details':'View Details';
+}
+const search=document.getElementById('search');
+search.addEventListener('input',function(){
+  const query=this.value.toLowerCase().trim();
+  let visible=0;
+  document.querySelectorAll('.card').forEach(function(card){
+    const match=(card.dataset.name+' '+card.innerText).toLowerCase().includes(query);
+    card.style.display=match?'':'none';
+    if(match) visible++;
+  });
+  document.getElementById('noResults').style.display=visible?'none':'block';
+});
+</script>
+</body>
+</html>
