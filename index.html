@@ -1,169 +1,391 @@
-  <!DOCTYPE html>
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-Vacuum Chlorination System
-header{background:var(--navy);color:white;padding:18px 7%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
-.logo{
-  font-size:30px;
-  font-weight:800;
-  color:white;
-  letter-spacing:1px;
-}
-nav a{color:white;text-decoration:none;margin:0 9px;font-size:14px}
-.hero{padding:65px 7%;background:linear-gradient(120deg,#e8f6fc,#fff);display:grid;grid-template-columns:1.2fr 1fr;align-items:center;gap:30px}
-.hero h1{font-size:clamp(30px,4vw,48px);line-height:1.15;color:var(--navy)}
-.hero p{font-size:17px}
-.btn{display:inline-block;background:var(--blue);color:white;padding:12px 20px;border:0;border-radius:6px;text-decoration:none;cursor:pointer}
-.hero img{width:100%;border-radius:12px;object-fit:cover;max-height:330px}
-section{padding:48px 7%}
-h2{text-align:center;color:var(--navy);margin-top:0}
-.intro{text-align:center;max-width:780px;margin:0 auto 28px}
-.search{display:block;width:100%;max-width:500px;margin:0 auto 25px;padding:13px;border:1px solid #b9cbd6;border-radius:7px;font-size:16px}
-.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
-.card{border:1px solid #dce7ed;border-radius:10px;overflow:hidden;background:white;box-shadow:0 3px 12px #17344c0b}
-.card img{width:100%;height:180px;object-fit:cover;background:var(--light)}
-.card-content{padding:18px}
-.card h3{margin:0 0 8px;color:var(--navy)}
-.card p{font-size:14px}
-.tag{font-size:12px;color:#087eae;font-weight:bold}
-.details{display:none;margin-top:10px;padding:10px;background:var(--light);font-size:14px}
-.details.open{display:block}
-.alt{background:var(--light)}
-.columns{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-.columns article{background:white;padding:20px;border-radius:8px}
-footer{background:var(--navy);color:white;text-align:center;padding:28px 7%}
-footer a{color:white}
-@media(max-width:800px){.hero{grid-template-columns:1fr}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.columns{grid-template-columns:1fr 1fr}}
-@media(max-width:520px){.grid,.columns{grid-template-columns:1fr}nav a{display:inline-block;margin:4px}}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cinderella Industries | Water Treatment Solutions</title>
+  <meta name="description" content="Cinderella Industries provides vacuum chlorination systems and water treatment equipment.">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      color: #18334b;
+      line-height: 1.6;
+      background: #f5faff;
+    }
+
+    header {
+      background: white;
+      padding: 18px 7%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 15px;
+      box-shadow: 0 2px 12px #12334b12;
+    }
+
+    .logo {
+      font-size: 23px;
+      font-weight: bold;
+      color: #0876bd;
+    }
+
+    .tagline {
+      font-size: 11px;
+      letter-spacing: 2px;
+      color: #53748b;
+    }
+
+    nav {
+      display: flex;
+      gap: 22px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #18334b;
+      font-weight: 600;
+    }
+
+    nav a:hover {
+      color: #0787d1;
+    }
+
+    .hero {
+      padding: 55px 7%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 35px;
+      background: linear-gradient(135deg, #e5f6ff, #ffffff);
+    }
+
+    .eyebrow {
+      color: #087fc3;
+      font-size: 13px;
+      font-weight: bold;
+      letter-spacing: 2px;
+      margin-bottom: 14px;
+    }
+
+    h1 {
+      font-size: clamp(34px, 4vw, 54px);
+      line-height: 1.15;
+      margin-bottom: 20px;
+      color: #123b5a;
+    }
+
+    .hero p {
+      font-size: 17px;
+      color: #526c7e;
+      margin-bottom: 25px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 13px 23px;
+      border-radius: 6px;
+      text-decoration: none;
+      background: #087fc3;
+      color: white;
+      font-weight: bold;
+    }
+
+    .button:hover {
+      background: #075f94;
+    }
+
+    .hero-image {
+      width: 100%;
+      display: block;
+      border-radius: 14px;
+      box-shadow: 0 12px 35px #12334b25;
+    }
+
+    section.content {
+      padding: 65px 7%;
+      scroll-margin-top: 20px;
+    }
+
+    .section-heading {
+      text-align: center;
+      font-size: 32px;
+      color: #123b5a;
+      margin-bottom: 12px;
+    }
+
+    .section-intro {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 35px;
+      color: #607688;
+    }
+
+    .about {
+      background: white;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 22px;
+    }
+
+    .card {
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      border: 1px solid #dcecf5;
+      box-shadow: 0 5px 18px #12334b09;
+    }
+
+    .card .symbol {
+      font-size: 30px;
+      margin-bottom: 12px;
+    }
+
+    .card h3 {
+      color: #0876bd;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: #607688;
+    }
+
+    .products {
+      background: #edf8ff;
+    }
+
+    .applications {
+      background: white;
+    }
+
+    .contact {
+      background: #123b5a;
+      color: white;
+      text-align: center;
+    }
+
+    .contact .section-heading {
+      color: white;
+    }
+
+    .contact p {
+      margin: 10px auto 22px;
+      color: #e0eff8;
+    }
+
+    footer {
+      padding: 20px;
+      background: #0c2d46;
+      color: #d9eaf5;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    @media (max-width: 750px) {
+      header {
+        justify-content: center;
+        text-align: center;
+      }
+
+      nav {
+        justify-content: center;
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+        padding: 40px 6%;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      section.content {
+        padding: 45px 6%;
+      }
+    }
+  </style>
 </head>
+
 <body>
-<header>
- 
-<div class="logo">
-  💧 Cinderella Industries
-  <div style="font-size:12px;font-weight:normal;letter-spacing:2px;margin-top:5px;">
-    CLEAN WATER • HEALTHIER TOMORROW
-  </div>
-</div>
-  <nav>
-    <a href="#home">Home</a><a href="#about">About</a>
-    <a href="#products">Products</a><a href="#applications">Applications</a>
-    <a href="#contact">Contact</a>
-  </nav>
-</header>
+  <header>
+    <div>
+      <div class="logo">💧 Cinderella Industries</div>
+      <div class="tagline">CLEAN WATER • HEALTHIER TOMORROW</div>
+    </div>
 
-<main>
-<section class="hero" id="home">
-  <div>
-    <p class="tag">WATER TREATMENT EQUIPMENT</p>
-    <h1>Vacuum Chlorination System</h1>
-    <p>Explore components used in vacuum chlorination systems for controlled chlorine dosing in water-treatment applications.</p>
-    <a class="btn" href="#products">Explore Products</a>
-  </div>
-  
-<img src="cinderella-banner.png" alt="Cinderella Industries Vacuum Chlorination System">
-     alt="Cinderella Industries water treatment equipment"
-     style="width:100%;max-height:330px;object-fit:cover;border-radius:12px;box-shadow:0 4px 14px #17344c30;">
-</section>
-</section>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#products">Products</a>
+      <a href="#applications">Applications</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
-<section id="about">
-  <h2>About the System</h2>
-  <p class="intro">A vacuum chlorination system uses a vacuum-based mechanism to draw and meter chlorine gas into a water stream for disinfection. System design and components vary by manufacturer, capacity and application.</p>
-</section>
+  <main>
+    <section class="hero" id="home">
+      <div>
+        <div class="eyebrow">WATER TREATMENT EQUIPMENT</div>
+        <h1>Vacuum Chlorination System</h1>
+        <p>
+          Reliable water disinfection solutions designed to support
+          safer water treatment for industrial and municipal applications.
+        </p>
+        <a class="button" href="#products">Explore Products</a>
+      </div>
 
-<section id="products" class="alt">
-  <h2>Our Products</h2>
-  <p class="intro">Browse the components below. Select “View Details” to read a short description.</p>
-  <input id="search" class="search" type="search" placeholder="Search products..." aria-label="Search products">
-  <div class="grid" id="productGrid">
-    <article class="card" data-name="ejector injector venturi">
-      <img src="cinderella-banner.png" alt="Cinderella Industries Vacuum Chlorination System">
-      <div class="card-content"><span class="tag">01 · VACUUM COMPONENT</span><h3>Ejector</h3><p>Uses a motive-water stream to create vacuum and draw chlorine gas into the water flow.</p><button class="btn" onclick="toggleDetails(this)">View Details</button><div class="details">Commonly based on a venturi principle. Confirm water pressure, flow requirements and material compatibility from the selected model's datasheet.</div></div>
-    </article>
-    <article class="card" data-name="flow meter rotameter">
-      <img src="https://images.unsplash.com/photo-1581092334651-ddf26d9a09d0?auto=format&fit=crop&w=700&q=80" alt="Industrial instrument representing a flow meter">
-      <div class="card-content"><span class="tag">02 · MEASUREMENT</span><h3>Flow Meter</h3><p>Indicates the chlorine-gas flow rate in compatible chlorination equipment.</p><button class="btn" onclick="toggleDetails(this)">View Details</button><div class="details">Flow range, calibration, scale units and gas compatibility depend on the exact meter model.</div></div>
-    </article>
-    <article class="card" data-name="vacuum regulator">
-      <img src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&w=700&q=80" alt="Industrial component representing a vacuum regulator">
-      <div class="card-content"><span class="tag">03 · VACUUM CONTROL</span><h3>Vacuum Regulator</h3><p>Helps regulate vacuum and control gas supply in a designed vacuum chlorination assembly.</p><button class="btn" onclick="toggleDetails(this)">View Details</button><div class="details">Construction, operating range and safety features must be checked against manufacturer documentation.</div></div>
-    </article>
-    <article class="card" data-name="pressure reducing valve">
-      <img src="https://images.unsplash.com/photo-1567789884554-0b844b597180?auto=format&fit=crop&w=700&q=80" alt="Industrial valve">
-      <div class="card-content"><span class="tag">04 · PRESSURE CONTROL</span><h3>Pressure Reducing Valve</h3><p>Reduces inlet pressure to a specified downstream pressure in applications for which the valve is designed.</p><button class="btn" onclick="toggleDetails(this)">View Details</button><div class="details">Do not assume every pressure reducing valve is suitable for chlorine service. Verify the exact gas, pressure rating and materials.</div></div>
-    </article>
-    <article class="card" data-name="vacuum switch sensor">
-      <img src="https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?auto=format&fit=crop&w=700&q=80" alt="Industrial sensor and control equipment">
-      <div class="card-content"><span class="tag">05 · MONITORING</span><h3>Vacuum Switch</h3><p>Provides an electrical switching signal when the sensed vacuum reaches its configured threshold.</p><button class="btn" onclick="toggleDetails(this)">View Details</button><div class="details">Check switching range, electrical rating, connection type and compatibility with the control system.</div></div>
-    </article>
-    <article class="card" data-name="auxiliary valve">
-      <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=700&q=80" alt="Industrial valve component">
-      <div class="card-content"><span class="tag">06 · FLOW CONTROL</span><h3>Auxiliary Valve</h3><p>An additional valve used for an intended isolation or control function in a compatible assembly.</p><button class="btn" onclick="toggleDetails(this)">View Details</button><div class="details">Its exact role and permitted use depend on the equipment design and manufacturer instructions.</div></div>
-    </article>
-    <article class="card" data-name="clamp mounting pipe clamp">
-      <img src="https://images.unsplash.com/photo-1530124566582-a618bc2615dc?auto=format&fit=crop&w=700&q=80" alt="Industrial hardware">
-      <div class="card-content"><span class="tag">07 · MOUNTING</span><h3>Clamp</h3><p>Secures suitable pipes, tubing or components in a mounting arrangement.</p><button class="btn" onclick="toggleDetails(this)">View Details</button><div class="details">Select a clamp based on dimensions, load, environment and the manufacturer's installation guidance.</div></div>
-    </article>
-    <article class="card" data-name="floor mounted chlorinator">
-      <img src="https://images.unsplash.com/photo-1581093458791-9d42e3c3f7f0?auto=format&fit=crop&w=700&q=80" alt="Industrial equipment representing a floor-mounted chlorinator">
-      <div class="card-content"><span class="tag">08 · CHLORINATION</span><h3>Floor-Mounted Chlorinator</h3><p>A floor-installed chlorinator assembly designed to meter chlorine for a water-treatment process.</p><button class="btn" onclick="toggleDetails(this)">View Details</button><div class="details">Capacity, mounting, gas supply configuration and required accessories depend on the selected model.</div></div>
-    </article>
-    <article class="card" data-name="manifold cylinder header">
-      <img src="https://images.unsplash.com/photo-1516937941344-00b4e0337589?auto=format&fit=crop&w=700&q=80" alt="Industrial piping and manifold equipment">
-      <div class="card-content"><span class="tag">09 · GAS DISTRIBUTION</span><h3>Manifold</h3><p>Connects multiple gas-cylinder outlets to a common header in a properly engineered system.</p><button class="btn" onclick="toggleDetails(this)">View Details</button><div class="details">A chlorine-service manifold requires approved materials, connections, pressure ratings and professional installation.</div></div>
-    </article>
-    <article class="card" data-name="copper pipe tubing">
-      <img src="https://images.unsplash.com/photo-1530124566582-a618bc2615dc?auto=format&fit=crop&w=700&q=80" alt="Metal tubing representing piping components">
-      <div class="card-content"><span class="tag">10 · PIPING</span><h3>Copper Pipe</h3><p>Listed for comparison as a piping component; suitability must be assessed for the intended service.</p><button class="btn" onclick="toggleDetails(this)">View Details</button><div class="details">Copper must not be assumed suitable for chlorine gas. Verify dry or wet service conditions and the equipment manufacturer's approved materials before specifying any pipe.</div></div>
-    </article>
-  </div>
-  <p id="noResults" style="display:none;text-align:center">No matching products found.</p>
-</section>
+      <div>
+        <img
+          class="hero-image"
+          src="cinderella-banner.png"
+          alt="Cinderella Industries vacuum chlorination system banner">
+      </div>
+    </section>
 
-<section id="applications">
-  <h2>Applications</h2>
-  <div class="columns">
-    <article><h3>Drinking Water</h3><p>Chlorination may be used as part of a properly designed drinking-water disinfection process.</p></article>
-    <article><h3>Wastewater</h3><p>Selected treatment plants use controlled disinfection as one stage of wastewater treatment.</p></article>
-    <article><h3>Industrial Water</h3><p>Suitable systems can support process-water treatment when selected and operated to relevant requirements.</p></article>
-  </div>
-</section>
+    <section class="content about" id="about">
+      <h2 class="section-heading">About Us</h2>
+      <p class="section-intro">
+        Cinderella Industries focuses on water treatment equipment
+        and chlorination solutions that support clean and safe water.
+      </p>
 
-<section id="contact" class="alt">
-  <h2>Product Enquiry</h2>
-  <p class="intro">For a real installation, contact a qualified supplier and request the correct product datasheet, compatibility details and safety documentation.</p>
-  <p style="text-align:center"><a class="btn" href="mailto:">Contact Supplier by Email</a></p>
-  <p class="intro">Demo website: replace this email link with the approved company email before publishing for business use.</p>
-</section>
-</main>
+      <div class="cards">
+        <article class="card">
+          <div class="symbol">💧</div>
+          <h3>Clean Water</h3>
+          <p>Supporting water disinfection and treatment processes.</p>
+        </article>
 
-<footer>
-  <p><strong>Vacuum Chlorination System Products</strong></p>
-  <p>Educational project · Product images are illustrative and may not represent exact models.</p>
-  <p>Technical specifications should be confirmed with the manufacturer.</p>
-</footer>
+        <article class="card">
+          <div class="symbol">⚙️</div>
+          <h3>Reliable Equipment</h3>
+          <p>Components designed for water treatment applications.</p>
+        </article>
 
-<script>
-function toggleDetails(button){
-  const details=button.nextElementSibling;
-  details.classList.toggle('open');
-  button.textContent=details.classList.contains('open')?'Hide Details':'View Details';
-}
-const search=document.getElementById('search');
-search.addEventListener('input',function(){
-  const query=this.value.toLowerCase().trim();
-  let visible=0;
-  document.querySelectorAll('.card').forEach(function(card){
-    const match=(card.dataset.name+' '+card.innerText).toLowerCase().includes(query);
-    card.style.display=match?'':'none';
-    if(match) visible++;
-  });
-  document.getElementById('noResults').style.display=visible?'none':'block';
-});
-</script>
+        <article class="card">
+          <div class="symbol">🛡️</div>
+          <h3>Safety Focus</h3>
+          <p>Promoting safe operation and proper equipment handling.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="content products" id="products">
+      <h2 class="section-heading">Our Products</h2>
+      <p class="section-intro">
+        Equipment and components used in vacuum chlorination systems.
+      </p>
+
+      <div class="cards">
+        <article class="card">
+          <div class="symbol">🔧</div>
+          <h3>Vacuum Regulator</h3>
+          <p>Helps regulate chlorine gas flow under vacuum conditions.</p>
+        </article>
+
+        <article class="card">
+          <div class="symbol">📏</div>
+          <h3>Flow Meter</h3>
+          <p>Indicates the flow rate within the system.</p>
+        </article>
+
+        <article class="card">
+          <div class="symbol">⚙️</div>
+          <h3>Ejector</h3>
+          <p>Uses water flow to create vacuum and draw chlorine gas.</p>
+        </article>
+
+        <article class="card">
+          <div class="symbol">🔩</div>
+          <h3>Pressure Reducing Valve</h3>
+          <p>Helps control pressure in compatible equipment setups.</p>
+        </article>
+
+        <article class="card">
+          <div class="symbol">🎛️</div>
+          <h3>Vacuum Switch</h3>
+          <p>Monitors vacuum conditions for system control.</p>
+        </article>
+
+        <article class="card">
+          <div class="symbol">🔗</div>
+          <h3>Auxiliary Valve & Clamp</h3>
+          <p>Supporting components used in suitable system assemblies.</p>
+        </article>
+
+        <article class="card">
+          <div class="symbol">🏭</div>
+          <h3>Floor-Mounted Chlorinator</h3>
+          <p>Equipment used in chlorination installations.</p>
+        </article>
+
+        <article class="card">
+          <div class="symbol">🔧</div>
+          <h3>Manifold</h3>
+          <p>Connects compatible supply lines in a system.</p>
+        </article>
+
+        <article class="card">
+          <div class="symbol">〰️</div>
+          <h3>Copper Pipe</h3>
+          <p>Piping component for suitable specified applications.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="content applications" id="applications">
+      <h2 class="section-heading">Applications</h2>
+      <p class="section-intro">
+        Vacuum chlorination systems can be used in appropriately designed
+        water treatment installations.
+      </p>
+
+      <div class="cards">
+        <article class="card">
+          <h3>Municipal Water Treatment</h3>
+          <p>Water disinfection in municipal treatment facilities.</p>
+        </article>
+
+        <article class="card">
+          <h3>Industrial Water Treatment</h3>
+          <p>Suitable treatment processes in industrial facilities.</p>
+        </article>
+
+        <article class="card">
+          <h3>Wastewater Treatment</h3>
+          <p>Disinfection processes in suitable wastewater installations.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="content contact" id="contact">
+      <h2 class="section-heading">Contact Us</h2>
+      <p>
+        Interested in our water treatment equipment?
+        Contact Cinderella Industries for more information.
+      </p>
+      <a class="button" href="mailto:">Contact Our Team</a>
+    </section>
+  </main>
+
+  <footer>
+    © 2026 Cinderella Industries. All rights reserved.
+  </footer>
 </body>
 </html>
